@@ -15,7 +15,7 @@ go build
 \# product_name : 产品名称,同codis-config中的 product 一致  
 \# log_file : 日志文件名称  
 \# log_level : 日志等级 debug/info/error  
-\# check_interval : 每次检测的时间间隔  
+\# check_interval : 每次检测的时间间隔  单位是秒
 \# max_try_times : PING失败多少次认为server故障  
 \# email_addr : 发送邮件使用的账号  
 \# email_pwd : 发送邮件使用的密码  
@@ -24,5 +24,6 @@ go build
 \# send_interval : 发送邮件间隔时间，单位是秒(避免server故障后未及时恢复导致频繁发送邮件)  
 
 codis-ha [codis-ha.json]
-
-
+启动后台方式
+cd $GOPATH/src/github.com/CodisLabs/codis
+ nohup ./bin/codis-ha ./bin/codis-ha.json &
